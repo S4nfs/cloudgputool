@@ -8,7 +8,7 @@ A Powershell one-click solution to enable NVIDIA GeForce Experience GameStream o
 ## Installation
 Copy and paste these commands in the machine's powershell prompt:
 ```
-[Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls";Set-ExecutionPolicy Unrestricted;Invoke-WebRequest -Uri https://github.com/S4nfs/cloudgputool/archive/master.zip -OutFile arch.zip;Add-Type -Assembly "System.IO.Compression.Filesystem";$dir = [string](Get-Location);rmdir -r cloudgamestream-master -ErrorAction Ignore;[System.IO.Compression.ZipFile]::ExtractToDirectory($dir + "\arch.zip", $dir);cd cloudgputool-master;./Setup.ps1
+[Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls";Set-ExecutionPolicy Unrestricted;Invoke-WebRequest -Uri https://github.com/S4nfs/cloudgputool/archive/master.zip -OutFile arch.zip;Add-Type -Assembly "System.IO.Compression.Filesystem";$dir = [string](Get-Location);rmdir -r cloudgputool-master -ErrorAction Ignore;[System.IO.Compression.ZipFile]::ExtractToDirectory($dir + "\arch.zip", $dir);cd cloudgputool-master;./Setup.ps1
 ```
 Or you can download the script and binaries from [here](https://github.com/S4nfs/cloudgputool/archive/master.zip).  
 &nbsp;  
