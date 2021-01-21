@@ -8,9 +8,9 @@ A Powershell one-click solution to enable NVIDIA GeForce Experience GameStream o
 ## Installation
 Copy and paste these commands in the machine's powershell prompt:
 ```
-[Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls";Set-ExecutionPolicy Unrestricted;Invoke-WebRequest -Uri https://github.com/S4nfs/cloudgamestream/archive/master.zip -OutFile arch.zip;Add-Type -Assembly "System.IO.Compression.Filesystem";$dir = [string](Get-Location);rmdir -r cloudgamestream-master -ErrorAction Ignore;[System.IO.Compression.ZipFile]::ExtractToDirectory($dir + "\arch.zip", $dir);cd cloudgamestream-master;./Setup.ps1
+[Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls";Set-ExecutionPolicy Unrestricted;Invoke-WebRequest -Uri https://github.com/S4nfs/cloudgputool/archive/master.zip -OutFile arch.zip;Add-Type -Assembly "System.IO.Compression.Filesystem";$dir = [string](Get-Location);rmdir -r cloudgamestream-master -ErrorAction Ignore;[System.IO.Compression.ZipFile]::ExtractToDirectory($dir + "\arch.zip", $dir);cd cloudgputool-master;./Setup.ps1
 ```
-Or you can download the script and binaries from [here](https://github.com/acceleration3/cloudgamestream/archive/master.zip).  
+Or you can download the script and binaries from [here](https://github.com/S4nfs/cloudgputool/archive/master.zip).  
 &nbsp;  
 &nbsp;  
 
@@ -35,7 +35,7 @@ Tested and working on the following:
 &nbsp;  
 ## FAQ
 ### Will this work on \<insert platform and instance name here\>?
-I am building a list of platforms it currently supports, so if you've tested it yourself and it works, please message me on reddit `/u/acceleration3` with the information on your VM. If it doesn't work you can also message me with details and I will try and change the script to support your VM.
+I am building a list of platforms it currently supports, so if you've tested it yourself and it works, please message me on reddit '' with the information on your VM. If it doesn't work you can also message me with details and I will try and change the script to support your VM.
 
 ### The script didn't enable my GameStream at all.
   Remember that the feature **will not show up on GeForce Experience on a Microsoft Remote Desktop session**. I recommend using AnyDesk as an alternative. If it still doesn't work then the script doesn't currently support your machine. 
