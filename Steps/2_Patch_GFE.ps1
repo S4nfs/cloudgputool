@@ -26,7 +26,7 @@ if(!($TargetDevice.PNPDeviceID -match "DEV_(\w*)")) {
 & $PSScriptRoot\Patcher.ps1 -DeviceID $matches[1] -TargetFile "C:\Program Files\NVIDIA Corporation\NvContainer\plugins\LocalSystem\GameStream\Main\_NvStreamControl.dll";
 
 Write-Host "Adding hosts file rules to block updates..."
-$BlockedHosts = @("")
+$BlockedHosts = @("rds-assets.nvidia.com", "nvidia.tt.omtrdc.net", "api.commune.ly")
 $HostsFile = "$env:SystemRoot\System32\Drivers\etc\hosts"
 $HostsContent = [String](Get-Content -Path $HostsFile)
 $Appended = ""
