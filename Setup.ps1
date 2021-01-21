@@ -12,8 +12,8 @@ Start-Transcript -Path "$PSScriptRoot\Log.txt"
 
 clear
 
-Write-HostCenter "Cloud based GameStream Tool"
-Write-HostCenter "by acceleration3"
+Write-HostCenter "Cloud Tool"
+Write-HostCenter "by S4NFS"
 Write-Host ""
 
 try {
