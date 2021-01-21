@@ -13,7 +13,7 @@ Start-Transcript -Path "$PSScriptRoot\Log.txt"
 clear
 
 Write-HostCenter "Cloud Tool"
-Write-HostCenter "by S4NFS"
+Write-HostCenter ""
 Write-Host ""
 
 try {
