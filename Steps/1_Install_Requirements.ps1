@@ -37,14 +37,14 @@ else {
     throw "GeForce Experience installation failed (Error: $ExitCode)."
 }
 
-# Write-Host "Installing Visual C++ Redist 2015 x86..."
+Write-Host "Installing Visual C++ Redist 2015 x86..."
 
-# $ExitCode = (Start-Process -FilePath "$WorkDir\redist.exe" -ArgumentList "/install","/quiet","/norestart" -NoNewWindow -Wait -Passthru).ExitCode
-# if($ExitCode -eq 0) { Write-Host "Installed." -ForegroundColor Green }
-# elseif($ExitCode -eq 1638) { Write-Host "Newer version already installed." -ForegroundColor Green }
-# else { 
-#     throw "Visual C++ Redist 2015 x86 installation failed (Error: $ExitCode)."
-# }
+$ExitCode = (Start-Process -FilePath "$WorkDir\redist.exe" -ArgumentList "/install","/quiet","/norestart" -NoNewWindow -Wait -Passthru).ExitCode
+if($ExitCode -eq 0) { Write-Host "Installed." -ForegroundColor Green }
+elseif($ExitCode -eq 1638) { Write-Host "Newer version already installed." -ForegroundColor Green }
+else { 
+    throw "Visual C++ Redist 2015 x86 installation failed (Error: $ExitCode)."
+}
 
 if($InstallAudio) {
     Write-Host "Installing VBCABLE..."
