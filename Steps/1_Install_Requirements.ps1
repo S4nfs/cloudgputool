@@ -24,7 +24,7 @@ Import-Module BitsTransfer
 $InstallAudio = (Read-Host "You need to have an audio interface installed for GameStream to work. Install VBCABLE? (y/n)").ToLower() -eq "y"
 $InstallVideo = (Read-Host "You also need the NVIDIA GRID Drivers installed. Installing will reboot your machine. Install the tested and recommended ones? (y/n)").ToLower() -eq "y"
 
-Download-File "https://us.download.nvidia.com/GFE/GFEClient/3.18.0.94/GeForce_Experience_v3.18.0.94.exe" "$WorkDir\GFE.exe" "GeForce Experience"
+Download-File "https://in.download.nvidia.com/GFE/GFEClient/3.24.0.126/GeForce_Experience_v3.24.0.126.exe" "$WorkDir\GFE.exe" "GeForce Experience"
 Download-File "https://download.microsoft.com/download/9/3/F/93FCF1E7-E6A4-478B-96E7-D4B285925B00/vc_redist.x86.exe" "$WorkDir\redist.exe" "Visual C++ Redist 2015 x86"
 if($InstallAudio) { Download-File "https://download.vb-audio.com/Download_CABLE/VBCABLE_Driver_Pack43.zip" "$WorkDir\vbcable.zip" "VBCABLE" }
 if($InstallVideo) { Download-File "https://download.microsoft.com/download/b/8/f/b8f5ecec-b8f9-47de-b007-ac40adc88dc8/442.06_grid_win10_64bit_international_whql.exe" "$WorkDir\Drivers.exe" "NVIDIA GRID Drivers" }
